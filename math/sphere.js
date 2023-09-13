@@ -22,19 +22,17 @@ var Sphere = function(center, radius) {
 
 
 
-    // todo - make sure this.center and this.radius are replaced with default values if and only if they
+    //makes sure this.center and this.radius are replaced with default values if and only if they
     // are invalid or undefined (i.e. center should be of type Vector3 & radius should be a Number)
-    if (!(center instanceof Vector3)) {
-        center = new Vector3(0, 0, 0);
+
+    if (this.center === undefined || this.radius === undefined || this.radius <= 0) {
+        this.center = new Vector3(0, 0, 0);
+        this.radius = 1;
     }
 
-    if (typeof radius !== 'number') {
-        radius = 1;
-    }
 
     this.center = center;
     this.radius = radius;
-
     // - the default center should be the zero vector
     // - the default radius should be 1
     // YOUR CODE HERE
@@ -85,7 +83,6 @@ Sphere.prototype = {
         //        normal: 'a vector3 containing a unit length normal at the intersection point',
         //        distance: 'a scalar containing the intersection distance from the ray origin'
         //      }
-
 
         // An object created from a literal that we will return as our result
         // Replace the null values in the properties below with the right values
