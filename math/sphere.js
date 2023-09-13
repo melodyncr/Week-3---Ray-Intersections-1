@@ -12,6 +12,12 @@
  * if (result.hit) {
  *   console.log("Got a valid intersection!");
  * }
+ * 
+ * 
+ * Author: Melody Neely
+ * Partner:Luke Moore
+ * Notes: I was unable to complete the full assignment on time I got stuck and didnt ask for help 
+ *I do want to further strengthing knowledge of it so I might work on it on my free time.
  */
 
 var Sphere = function(center, radius) {
